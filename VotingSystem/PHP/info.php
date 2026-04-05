@@ -37,20 +37,18 @@ foreach ($roles as $role) {
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "<tr style='border-bottom: 1px solid #eee; font-size: 0.9em; color: #333;'>
-                    <td style='padding: 10px;'>{$row['school_id']}</td>
-                    <td>{$row['fullname']}</td>
-                    <td>{$row['email']}</td>";
-            
-            if ($showCourse) echo "<td>{$row['course']}</td>";
-            
-            echo "<td>
-                        <button class='view-btn' data-id='{$row['user_id']}' style='background:#007bff; color:white; border:none; padding:5px 12px; cursor:pointer; border-radius:3px;'>View</button>
-                        <button class='del-btn' data-id='{$row['user_id']}' style='background:white; border:1px solid #ccc; padding:5px 10px; cursor:pointer; border-radius:3px; margin-left:5px;'>Delete</button>
-                    </td>
-                  </tr>";
-        }
+       while($row = $result->fetch_assoc()) {
+    echo "<tr>
+            <td>{$row['school_id']}</td>
+            <td>{$row['fullname']}</td> <!-- FIXED: Changed from fname/lname to fullname -->
+            <td>{$row['email']}</td>
+            <td>{$row['course']}</td>
+            <td>
+                <button class='view-btn' data-id='{$row['user_id']}'>View</button>
+                <button class='del-btn' data-id='{$row['user_id']}'>Delete</button>
+            </td>
+          </tr>";
+}
     } else {
         $cols = $showCourse ? 5 : 4;
         echo "<tr><td colspan='$cols' style='text-align:center; padding: 20px; color: #ccc;'>No records found.</td></tr>";
@@ -59,3 +57,4 @@ foreach ($roles as $role) {
     echo "</tbody></table></div>";
 }
 ?>
+
