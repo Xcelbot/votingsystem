@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote Update - MULAT</title>
+    <style>
+        .container { width: 90%; margin: auto; font-family: sans-serif; background: #333; color: white; padding: 20px; }
+        .stat-bar { display: flex; justify-content: space-around; background: #eee; color: #333; padding: 10px; margin-bottom: 20px; }
+        .pos-card { background: #444; margin-bottom: 20px; padding: 10px; }
+        .pos-header { background: #555; text-align: center; padding: 5px; font-weight: bold; text-transform: uppercase; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; color: #333; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>VOTE UPDATE</h2>
+    
+    <div id="statBarContainer" class="stat-bar">    
+        <div>Total Voters: <span id="totalVoters">0</span></div>
+        <div>Current Votes: <span id="currentVotes">0</span></div>
+        <div>Percentage: <span id="percentVotes">0%</span></div>
+    </div>
+
+    <div id="voteCountArea">
+        <!-- Live Vote Counts per Position will be injected here -->
+    </div>
+
+    <hr>
+
+    <h2>VOTING HISTORY</h2>
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>STUDENT NO.</th>
+                <th>EMAIL</th>
+                <th>TIME VOTED</th>
+                <th>DATE VOTED</th>
+            </tr>
+        </thead>
+        <tbody id="historyData">
+            <!-- Voting history rows injected here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="../JS/jquery-4.0.0.min.js"></script>
+<script src="../JS/AJAX/voteupdate.js"></script>
+</body>
+</html>

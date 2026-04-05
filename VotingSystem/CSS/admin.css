@@ -1,0 +1,115 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+/* Background Image with Dark Overlay */
+.hero-wrapper {
+    height: 100vh;
+    width: 100%;
+    /* Replace 'background.jpg' with your actual image path */
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Faded Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    z-index: 10;
+}
+
+.nav-links a, .logout {
+    color: rgba(255, 255, 255, 0.45); /* Faded Font */
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 25px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: #fff; }
+
+/* 2. Centered Branding Alignment */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical Center */
+    align-items: center;     /* Horizontal Center */
+    text-align: center;
+}
+
+/* Metallic Gradient Title */
+.mulat-title {
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    margin: 0;
+    line-height: 1;
+    
+    /* Silver Gradient Logic */
+    background: linear-gradient(to bottom, #ffffff 20%, #a3a3a3 60%, #6e6e6e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.separator {
+    width: 280px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.3); /* Faded line */
+    margin: 15px 0;
+}
+
+.system-title {
+    font-size: 26px;
+    letter-spacing: 12px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Faded Tagline */
+.tagline {
+    color: rgba(255, 255, 255, 0.45); /* Faded Font */
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+}
+
+/* 3. The Pill-Shaped Button */
+.pill-button {
+    background-color: #d1d1d1; /* Metallic light grey */
+    color: #000;
+    text-decoration: none;
+    padding: 18px 100px;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 50px; /* Exact Pill Shape */
+    letter-spacing: 1.5px;
+    transition: 0.3s ease;
+    font-family: sans-serif;
+}
+
+.pill-button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
