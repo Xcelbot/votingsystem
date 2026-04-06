@@ -1,0 +1,113 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+/* Background Image Fix */
+.hero-wrapper {
+    height: 100vh;
+    width: 100%;
+    
+    /* 1. Added '../' to move out of the CSS folder 
+       2. Changed rgba to 0.85 for a deep cinematic dark look */
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                url('../VIEW/background.jpg'); /* Adjust 'VIEW' to your actual folder name */
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling if image is small */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rest of your styles remain the same... */
+
+/* 1. Faded Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    z-index: 10;
+}
+
+.nav-links a, .logout {
+    color: rgba(255, 255, 255, 0.45); 
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 25px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: #fff; }
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;
+}
+
+.mulat-title {
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    margin: 0;
+    line-height: 1;
+    background: linear-gradient(to bottom, #ffffff 20%, #a3a3a3 60%, #6e6e6e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.separator {
+    width: 280px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.3); 
+    margin: 15px 0;
+}
+
+.system-title {
+    font-size: 26px;
+    letter-spacing: 12px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.tagline {
+    color: rgba(255, 255, 255, 0.45); 
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+}
+
+/* Button overrides for JS Toggle compatibility */
+.pill-button {
+    text-decoration: none;
+    padding: 18px 100px;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 50px; 
+    letter-spacing: 1.5px;
+    transition: 0.3s ease;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+    z-index: 20; /* Ensures button stays clickable over the background */
+}
