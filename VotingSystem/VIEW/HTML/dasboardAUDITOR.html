@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Update - MULAT</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../CSS/dasboardAUDITOR.css">
+</head>
+<body>
+
+    <div class="header-top">
+        <a href="../../CONTROLLER(BACKEND)/logout.php" class="logout">LOG OUT</a>
+    </div>
+
+    <nav class="header-nav">
+        <a href="dasboardOFFICER.html">CANDIDATE MANAGEMENT</a>
+        <a href="dasboardAUDITOR.html" class="active">VOTE UPDATE</a>
+        <a href="../result_history.php">VOTING HISTORY</a>
+        <a href="dasboardADMIN.html">DASHBOARD</a>
+        <a href="voterlist.html">INFORMATION MANAGEMENT</a>
+        <a href="registration.html">REGISTRATION</a>
+    </nav>
+
+    <div class="page-header">
+        <h1>LIVE ELECTION RESULTS</h1>
+    </div>
+
+    <div class="container">
+        
+        <div id="statBarContainer" class="stat-bar">    
+            <!-- Stats like Total Voters, Current Votes will be injected here -->
+        </div>
+
+        <!-- NEW: Charting Area -->
+        <div id="chartsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 30px; margin-bottom: 50px;">
+            <!-- Individual chart canvasses will be injected here via JS -->
+        </div>
+    </div>
+
+    <script src="../../JS/jquery-4.0.0.min.js"></script>
+    <script src="../../JS/CONTROLLER(FRONTEND)/voteupdate.js"></script>
+</body>
+</html>

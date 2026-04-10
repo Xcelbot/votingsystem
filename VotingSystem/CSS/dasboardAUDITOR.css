@@ -1,0 +1,60 @@
+/* 
+   dasboardAUDITOR.css - Standardized Premium Dark Theme 
+*/
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', 'Segoe UI', Georgia, sans-serif; }
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../VIEW/backgroundd.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* ---- NAV ---- */
+.header-top { display: flex; justify-content: flex-end; padding: 20px 50px 0; }
+.logout { color: #fff; text-decoration: none; font-family: 'Cinzel', 'Palatino Linotype', serif; font-weight: bold; font-size: 13px; letter-spacing: 2px; }
+
+.header-nav { display: flex; justify-content: center; flex-wrap: wrap; padding: 15px 10px; margin-bottom: 20px; }
+.header-nav a { color: #ccc; text-decoration: none; font-size: 11px; font-weight: 700; padding: 10px 15px; text-transform: uppercase; letter-spacing: 1.5px; text-align: center; transition: 0.3s; border-bottom: 2px solid transparent; }
+.header-nav a:hover { color: #fff; }
+.header-nav a.active { color: #fff; border-bottom: 2px solid #fff; }
+
+/* ---- PAGE HEADER ---- */
+.page-header { text-align: center; padding: 20px 20px 30px; }
+.page-header h1 { font-family: 'Cinzel', 'Palatino Linotype', Palatino, serif; font-size: 26px; letter-spacing: 5px; }
+
+.container { width: 92%; max-width: 1200px; margin: auto; padding: 20px 0 60px; }
+
+/* ---- STAT BAR ---- */
+.stat-bar { 
+    display: flex; justify-content: space-around; background: rgba(255,255,255,0.05); 
+    color: #fff; padding: 15px; margin-bottom: 30px; border: 1px solid #333; 
+    border-radius: 6px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+}
+.stat-bar span { color: #fff; font-weight: bold; margin-left: 5px; }
+
+/* ---- CHART PANELS ---- */
+#chartsContainer { grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)) !important; }
+
+.chart-panel { 
+    background: rgba(255,255,255,0.05); border: 1px solid #3a3a3a; 
+    border-radius: 8px; overflow: hidden; backdrop-filter: blur(10px);
+    display: flex; flex-direction: column; height: 320px;
+}
+
+.chart-header { 
+    background: rgba(255,255,255,0.03); padding: 12px; font-family: 'Cinzel', serif;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #aaa;
+    border-bottom: 1px solid #3a3a3a; text-align: center;
+}
+
+.chart-body { flex-grow: 1; padding: 20px; position: relative; }
+
+/* ---- TABLES ---- */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; background: rgba(255,255,255,0.03); color: #eee; font-size: 12px; }
+th { background: rgba(255,255,255,0.06); color: #aaa; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; padding: 12px; border: 1px solid #3a3a3a; text-align: center; }
+td { border: 1px solid #2a2a2a; padding: 12px; text-align: center; }
+tr:hover td { background: rgba(255,255,255,0.04); }
+
+h2 { font-family: 'Cinzel', serif; font-size: 16px; letter-spacing: 3px; margin: 30px 0 15px; text-align: center; color: #ccc; }
+hr { border: none; border-top: 1px solid #333; margin: 40px 0; }

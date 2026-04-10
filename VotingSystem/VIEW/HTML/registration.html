@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Mulat</title>
+    <!-- Local System Fonts Only -->
+    <link rel="stylesheet" href="../../CSS/registration.css">
+</head>
+
+<body>
+    <div class="bg-container">
+        <div class="header-top">
+            <a href="../../CONTROLLER(BACKEND)/logout.php" class="logout">LOG OUT</a>
+        </div>
+
+        <nav class="header-nav">
+            <a href="dasboardOFFICER.html">CANDIDATE MANAGEMENT</a>
+            <a href="dasboardAUDITOR.html">VOTE UPDATE</a>
+            <a href="../result_history.php">VOTING HISTORY</a>
+            <a href="dasboardADMIN.html">DASHBOARD</a>
+            <a href="voterlist.html">INFORMATION MANAGEMENT</a>
+            <a href="registration.html" class="active">REGISTRATION</a>
+        </nav>
+
+        <div class="header">
+            <h1>MULAT</h1>
+            <p style="font-family: 'Cinzel'; font-weight: bold; letter-spacing: 2px;">VOTING SYSTEM</p>
+        </div>
+        <div class="form-title">PERSONAL INFORMATION</div>
+        <form class="form-container" id="regForm">
+            <div class="left-col">
+                <div class="input-group"><label>First Name</label><input type="text" name="first_name" required></div>
+                <div class="input-group"><label>Middle Name</label><input type="text" name="middle_name"></div>
+                <div class="input-group"><label>Last Name</label><input type="text" name="last_name" required></div>
+                <div class="input-group">
+                    <label>College</label>
+                    <select name="college" id="college_select" required>
+                        <option value="">Select College</option>
+                        <option value="College-of-Information-and-Communication-Technology">College of Information and
+                            Communication Technology</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Course</label>
+                    <select name="course" id="course_select" required>
+                        <option value="">Select Course</option>
+                        <optgroup label="CICT Courses" id="group-College-of-Information-and-Communication-Technology">
+                            <option value="Bachelor of Science in Information Technology">Bachelor of Science in
+                                Information Technology</option>
+                            <option value="Bachelor of Library and Information Science">Bachelor of Library and
+                                Information Science</option>
+                            <option value="Bachelor of Science in Information Systems">Bachelor of Science in
+                                Information Systems</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Year Level</label>
+                    <select name="year_level" required>
+                        <option value="">Select Year Level</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="input-group"><label>Student ID</label><input type="number" name="school_id" required></div>
+                <div class="input-group"><label>Email</label><input type="email" name="email" required></div>
+                <div class="input-group"><label>Password</label><input type="password" name="password" id="pass"
+                        required></div>
+                <div class="input-group"><label>Confirm Password</label><input type="password" name="confirm_password"
+                        id="cpass" required></div>
+                <div class="input-group">
+                    <label>Role</label>
+                    <select name="role_id" required>
+                        <option value="">Select Role</option>
+                        <option value="2">Election Officer</option>
+                        <option value="3" selected>Voter</option>
+                        <option value="4">Auditor</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer-btns">
+                <button type="button" class="btn btn-back">Back</button>
+                <button type="submit" class="btn btn-next" id="btn">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script src="../../JS/jquery-4.0.0.min.js"></script>
+<script src="../../JS/CONTROLLER(FRONTEND)/register.js"></script>
+</body>
+
+</html>

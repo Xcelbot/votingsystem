@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INFORMATION MANAGEMENT</title>
+    <link rel="stylesheet" href="../../CSS/information.css">
+</head>
+<body>
+
+<div class="main-container">
+    
+    <!-- 1. THE LIST VIEW -->
+    <div id="listView">
+        <div class="top-bar">
+            <h2>Information Management</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by User ID...">
+                <button id="searchBtn">SEARCH</button>
+            </div>
+        </div>
+
+        <!-- This is where your PHP (info.php) will inject all the tables -->
+        <div id="managementListContainer">
+            <p style="text-align:center; padding: 40px; color: #999;">Loading records...</p>
+        </div>
+    </div>
+
+    <!-- 2. THE EDIT VIEW (Hidden until 'View' is clicked) -->
+    <div id="editView" style="display:none;">
+        <!-- Your userinfo.php form will be injected here -->
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../JS/jquery-4.0.0.min.js"></script>
+<script src="../../JS/CONTROLLER(FRONTEND)/info.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULAT Voting System - Admin</title>
+    <!-- Local Fonts Only - No Internet Required -->
+    <link rel="stylesheet" href="../../CSS/admin.css?v=4">
+</head>
+
+<body>
+    <div class="header-top">
+        <a href="../../CONTROLLER(BACKEND)/logout.php" class="logout">LOG OUT</a>
+    </div>
+
+    <nav class="header-nav">
+        <a href="dasboardOFFICER.html">CANDIDATE MANAGEMENT</a>
+        <a href="dasboardAUDITOR.html">VOTE UPDATE</a>
+        <a href="../result_history.php">VOTING HISTORY</a>
+        <a href="dasboardADMIN.html" class="active">DASHBOARD</a>
+        <a href="voterlist.html">INFORMATION MANAGEMENT</a>
+        <a href="registration.html">REGISTRATION</a>
+    </nav>
+
+    <div class="hero-content">
+        <div class="logo-group">
+            <h1 class="mulat-title">MULAT</h1>
+            <h2 class="system-title">VOTING SYSTEM</h2>
+        </div>
+        <p class="tagline">Vote Wisely, Give Justice to the<br>Country and Society</p>
+
+        <div id="electionControlArea">
+            <button id="startPollBtn" class="pill-button btn-closed">START VOTING POLL</button>
+            <button id="createElectionBtn" class="pill-button btn-closed btn-create"
+                onclick="window.location.href='election_creation.html'">create election</button>
+        </div>
+    </div>
+
+    <script src="../../JS/jquery-4.0.0.min.js"></script>
+    <script src="../../JS/CONTROLLER(FRONTEND)/admin.js"></script>
+</body>
+
+</html>

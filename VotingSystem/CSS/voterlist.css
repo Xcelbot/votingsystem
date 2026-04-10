@@ -1,0 +1,81 @@
+/* 
+   voterlist.css - Premium Dark Dashboard Theme 
+   Matches the Candidate Management aesthetic.
+*/
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', 'Segoe UI', Georgia, sans-serif; }
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../VIEW/backgroundd.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* ---- NAV ---- */
+.header-top { display: flex; justify-content: flex-end; padding: 20px 50px 0; }
+.logout { color: #fff; text-decoration: none; font-family: 'Cinzel', 'Palatino Linotype', serif; font-weight: bold; font-size: 13px; letter-spacing: 2px; }
+
+.header-nav { display: flex; justify-content: center; flex-wrap: wrap; padding: 15px 10px; margin-bottom: 10px; }
+.header-nav a { color: #ccc; text-decoration: none; font-size: 11px; font-weight: 700; padding: 10px 15px; text-transform: uppercase; letter-spacing: 1.5px; text-align: center; transition: 0.3s; border-bottom: 2px solid transparent; }
+.header-nav a:hover { color: #fff; }
+.header-nav a.active { color: #fff; border-bottom: 2px solid #fff; }
+
+/* ---- PAGE HEADER ---- */
+.page-header { text-align: center; padding: 20px 20px 30px; }
+.page-header h1 { font-family: 'Cinzel', 'Palatino Linotype', Palatino, serif; font-size: 26px; letter-spacing: 5px; }
+.page-header p { color: #aaa; font-size: 11px; margin-top: 6px; letter-spacing: 1px; }
+
+/* ---- TWO COLUMN LAYOUT ---- */
+.main-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; width: 95%; max-width: 1200px; margin: 0 auto 60px; }
+
+/* ---- PANELS ---- */
+.panel { background: rgba(255,255,255,0.05); border: 1px solid #3a3a3a; border-radius: 6px; padding: 25px; backdrop-filter: blur(10px); }
+.panel-title { font-family: 'Cinzel', 'Palatino Linotype', Palatino, serif; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #ccc; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #3a3a3a; }
+
+/* ---- FORMS ---- */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #aaa; margin-bottom: 5px; }
+.form-group input, .form-group select {
+    width: 100%; padding: 10px 12px; background: rgba(255,255,255,0.08);
+    border: 1px solid #444; border-radius: 4px; color: #fff; font-size: 12px;
+    font-family: inherit; outline: none; transition: 0.2s;
+}
+.form-group select option {
+    background-color: #222;
+    color: #fff;
+}
+.form-group input:focus, .form-group select:focus { border-color: #888; background: rgba(255,255,255,0.12); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* ---- BUTTONS ---- */
+.btn-primary {
+    background: #362e2e; color: #fff; border: 1px solid #555;
+    padding: 10px 24px; border-radius: 4px; font-size: 11px;
+    font-family: 'Cinzel', 'Palatino Linotype', serif; letter-spacing: 2px;
+    text-transform: uppercase; cursor: pointer; transition: 0.3s; margin-top: 5px; width: 100%;
+}
+.btn-primary:hover { background: #4a3f3f; transform: scale(1.02); }
+
+/* ---- TABLES ---- */
+table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
+table th { font-size: 10px; padding: 12px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #3a3a3a; color: #aaa; text-align: left; }
+table td { padding: 12px; border-bottom: 1px solid #2a2a2a; color: #eee; }
+table tr:hover td { background: rgba(255,255,255,0.04); }
+
+.top-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 0 5px; }
+.search-wrap input {
+    background: rgba(255,255,255,0.08); border: 1px solid #444; border-radius: 20px;
+    padding: 6px 15px; font-size: 11px; color: #fff; width: 220px; outline: none; transition: 0.3s;
+}
+.search-wrap input:focus { border-color: #888; width: 260px; }
+
+.btn-sm { padding: 5px 12px; font-size: 10px; border: 1px solid #555; border-radius: 3px; cursor: pointer; background: #3a2a2a; color: #fff; transition: 0.2s; text-transform: uppercase; letter-spacing: 1px; }
+.btn-sm:hover { background: #5e2e2e; color: #fff; }
+.delete-btn { background: #4a1a1a; }
+.delete-btn:hover { background: #7a1a1a; }
+
+.empty-row td { text-align: center; color: #666; padding: 30px; font-style: italic; }
+
+@media (max-width: 900px) {
+    .main-layout { grid-template-columns: 1fr; }
+}

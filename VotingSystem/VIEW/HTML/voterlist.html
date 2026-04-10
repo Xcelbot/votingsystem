@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Management - MULAT</title>
+    <!-- Local Fonts Only - No Internet Required -->
+    <link rel="stylesheet" href="../../CSS/voterlist.css?v=5">
+</head>
+
+<body>
+
+    <div class="header-top">
+        <a href="../../CONTROLLER(BACKEND)/logout.php" class="logout">LOG OUT</a>
+    </div>
+
+    <nav class="header-nav">
+        <a href="dasboardOFFICER.html">CANDIDATE MANAGEMENT</a>
+        <a href="dasboardAUDITOR.html">VOTE UPDATE</a>
+        <a href="../result_history.php">VOTING HISTORY</a>
+        <a href="dasboardADMIN.html">DASHBOARD</a>
+        <a href="voterlist.html" class="active">INFORMATION MANAGEMENT</a>
+        <a href="registration.html">REGISTRATION</a>
+    </nav>
+
+    <div class="page-header">
+        <h1>INFORMATION MANAGEMENT</h1>
+        <p>Maintain and manage the official voter database</p>
+    </div>
+
+    <div class="main-layout">
+
+        <!-- LEFT: Edit Voter Form -->
+        <div>
+            <div class="panel">
+                <div class="panel-title" id="formTitle">Edit Voter Information</div>
+                <form id="voterForm">
+                    <input type="hidden" name="user_id" id="v_user_id">
+                    
+                    <div class="form-group">
+                        <label>Student ID (school_id)</label>
+                        <input type="number" name="school_id" id="v_school_id" placeholder="e.g. 2021123456" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="fullname" id="v_fullname" placeholder="Last Name, First Name Middle Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" id="v_email" placeholder="student@email.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Course</label>
+                            <select name="course" id="v_course" required>
+                                <option value="">Select Course</option>
+                                <option value="BSIT">BSIT</option>
+                                <option value="BSIS">BSIS</option>
+                                <option value="BLIS">BLIS</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Year Level</label>
+                            <select name="year_level" id="v_year" required>
+                                <option value="">Year</option>
+                                <option value="1">1st</option>
+                                <option value="2">2nd</option>
+                                <option value="3">3rd</option>
+                                <option value="4">4th</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="display:none;" id="collegeGroup">
+                        <input type="hidden" name="college" value="College of Information and Communication Technology">
+                        <input type="hidden" name="role_id" value="3">
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-primary" disabled>SELECT A VOTER TO EDIT</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- RIGHT: Voter List Table -->
+        <div>
+            <div class="top-actions">
+                <div class="panel-title" style="border:none; padding:0; margin:0;">Enrolled Voters</div>
+                <div class="search-wrap">
+                    <input type="text" id="voterSearch" placeholder="Search by name or ID...">
+                </div>
+            </div>
+            <div class="panel">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Full Name</th>
+                            <th>Course / Year</th>
+                            <th style="text-align:center;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="voterListData">
+                        <tr class="empty-row"><td colspan="4">Loading voters...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../JS/jquery-4.0.0.min.js"></script>
+    <script src="../../JS/CONTROLLER(FRONTEND)/voterlist.js"></script>
+</body>
+
+</html>

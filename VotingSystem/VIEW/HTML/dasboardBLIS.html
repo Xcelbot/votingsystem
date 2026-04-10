@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLIS Ballot</title>
+    <!-- Local System Fonts Only -->
+    <link rel="stylesheet" href="../../CSS/dasboardBLIS.css">
+</head>
+<body>
+    <div class="top-nav">USER - CICT - LIS</div>
+    <div class="header-banner">
+        <div class="branding">
+            <h1>MULAT</h1>
+            <h2>VOTING SYSTEM</h2>
+        </div>
+        <a href="../../CONTROLLER(BACKEND)/logout.php" class="logout-link">LOG OUT</a>
+    </div>
+
+    <!-- Hidden Input for JS -->
+    <input type="hidden" id="course_filter" value="BLIS">
+
+    <div class="ballot-container">
+        <div class="instructions">
+            Kindly please double check the ballot by choosing your candidate for certain positions. If you<br>don't have any candidate for specific position you may click the abstain.
+        </div>
+        
+        <div id="ballotArea">
+            <!-- AJAX INJECTS ballot_template.php HERE -->
+        </div>
+    </div>
+
+    <script src="../../JS/jquery-4.0.0.min.js"></script>
+    <script src="../../JS/CONTROLLER(FRONTEND)/voter.js"></script>
+</body>
+</html>

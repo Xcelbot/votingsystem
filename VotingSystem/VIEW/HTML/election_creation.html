@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Creation - MULAT Voting System</title>
+    <!-- Local Fonts Only - No Internet Required -->
+    <link rel="stylesheet" href="../../CSS/election_creation.css">
+</head>
+<body>
+
+    <div class="header-top">
+        <a href="../../CONTROLLER(BACKEND)/logout.php" class="logout">LOG OUT</a>
+    </div>
+
+    <nav class="header-nav">
+        <a href="dasboardOFFICER.html">CANDIDATE MANAGEMENT</a>
+        <a href="dasboardAUDITOR.html">VOTE UPDATE</a>
+        <a href="../result_history.php">VOTING HISTORY</a>
+        <a href="dasboardADMIN.html" class="active">DASHBOARD</a>
+        <a href="voterlist.html">INFORMATION MANAGEMENT</a>
+        <a href="registration.html">REGISTRATION</a>
+    </nav>
+
+    <div class="page-header">
+        <h1>ELECTION CREATION</h1>
+        <p>Create elections and manage positions</p>
+    </div>
+
+    <div class="main-layout">
+
+        <!-- LEFT: Create Election + View Elections -->
+        <div>
+            <div class="panel">
+                <div class="panel-title">Create New Election</div>
+                <form id="electionForm">
+                    <div class="form-group">
+                        <label>Election Title</label>
+                        <input type="text" name="title" placeholder="e.g. General Election 2025" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description (optional)</label>
+                        <textarea name="description" placeholder="Brief description..."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Start Date &amp; Time</label>
+                            <input type="datetime-local" name="start" required>
+                        </div>
+                        <div class="form-group">
+                            <label>End Date &amp; Time</label>
+                            <input type="datetime-local" name="end" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">CREATE ELECTION</button>
+                </form>
+            </div>
+
+            <div class="panel" style="margin-top: 20px;">
+                <div class="panel-title">Existing Elections</div>
+                <div id="electionsList">
+                    <p class="empty-msg">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Manage Positions -->
+        <div>
+            <div class="panel">
+                <div class="panel-title">Manage Positions</div>
+
+                <div class="election-select-wrap">
+                    <label style="font-size:10px; text-transform:uppercase; letter-spacing:1px; color:#aaa; display:block; margin-bottom:6px;">Select Election</label>
+                    <select id="electionSelect">
+                        <option value="">-- Select an Election --</option>
+                    </select>
+                </div>
+
+                <table class="positions-table">
+                    <thead>
+                        <tr>
+                            <th>Position Name</th>
+                            <th style="text-align:center;">Max Votes</th>
+                            <th style="text-align:center;">Priority</th>
+                            <th style="text-align:center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="positionTableBody">
+                        <tr><td colspan="4" class="empty-msg">Select an election above.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="panel" style="margin-top: 20px;">
+                <div class="panel-title">Add New Position</div>
+                <form id="positionForm">
+                    <div class="form-group">
+                        <label>Position Name</label>
+                        <input type="text" name="position_name" placeholder="e.g. President, Senator..." required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Max Votes Allowed</label>
+                            <input type="number" name="max_votes" value="1" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Priority Order</label>
+                            <input type="number" name="priority_order" value="1" min="1" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">ADD POSITION</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../JS/jquery-4.0.0.min.js"></script>
+    <script src="../../JS/CONTROLLER(FRONTEND)/election_creation.js?v=2"></script>
+</body>
+</html>

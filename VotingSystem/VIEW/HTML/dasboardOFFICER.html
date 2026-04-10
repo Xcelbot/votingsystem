@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Management - MULAT</title>
+    <!-- Local Fonts Only - No Internet Required -->
+    <link rel="stylesheet" href="../../CSS/dasboardOFFICER.css">
+</head>
+<body>
+
+    <div class="header-top">
+        <a href="../../CONTROLLER(BACKEND)/logout.php" class="logout">LOG OUT</a>
+    </div>
+
+    <nav class="header-nav">
+        <a href="dasboardOFFICER.html" class="active">CANDIDATE MANAGEMENT</a>
+        <a href="dasboardAUDITOR.html">VOTE UPDATE</a>
+        <a href="../result_history.php">VOTING HISTORY</a>
+        <a href="dasboardADMIN.html">DASHBOARD</a>
+        <a href="voterlist.html">INFORMATION MANAGEMENT</a>
+        <a href="registration.html">REGISTRATION</a>
+    </nav>
+
+    <div class="page-header">
+        <h1>CANDIDATE MANAGEMENT</h1>
+        <p>Add, edit, and manage election candidates</p>
+    </div>
+
+    <!-- LOCK SCREEN: shown when no election/positions exist -->
+    <div class="lock-screen" id="lockScreen">
+        <div class="lock-icon">🔒</div>
+        <h2>NO ELECTION SET UP</h2>
+        <p>You must create an election and add positions before you can manage candidates. Go to Election Creation to get started.</p>
+        <a href="election_creation.html">GO TO ELECTION CREATION →</a>
+    </div>
+
+    <!-- MAIN CONTENT: shown only when positions exist -->
+    <div class="main-layout" id="mainContent" style="display:none;">
+
+        <!-- LEFT: Add Candidate Form -->
+        <div>
+            <div class="panel">
+                <div class="panel-title">Add Candidate</div>
+                <form id="candidateForm">
+                    <input type="hidden" name="candidate_id" id="c_id">
+                    <input type="hidden" name="action" id="action_val" value="add">
+
+                    <div class="form-group">
+                        <label>Position</label>
+                        <select name="position_id" id="pos_input" required>
+                            <option value="">Loading positions...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Candidate Name</label>
+                        <input type="text" name="name" id="name_input" placeholder="Full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>College</label>
+                        <select name="college" id="college_select" required>
+                            <option value="">Select College</option>
+                            <option value="College of Information and Communication Technology">CICT</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Course</label>
+                        <select name="course" id="course_select" required>
+                            <option value="">Select Course</option>
+                            <optgroup label="CICT Courses">
+                                <option value="BSIT">Bachelor of Science in Information Technology</option>
+                                <option value="BLIS">Bachelor of Library and Information Science</option>
+                                <option value="BSIS">Bachelor of Science in Information Systems</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="submit" id="btn" class="btn-primary">ADD</button>
+                        <button type="button" id="cancelBtn" class="btn-cancel" style="display:none;">CANCEL</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- RIGHT: Candidate Table -->
+        <div>
+            <div class="top-actions">
+                <div class="panel-title" style="border:none; padding:0; margin:0;">Registered Candidates</div>
+                <a href="../archive_view.php" class="btn-archive">📁 View Archive</a>
+            </div>
+            <div class="panel positions-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Candidate Name</th>
+                            <th>Course</th>
+                            <th>College</th>
+                            <th style="text-align:center;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="presidentData">
+                        <tr class="empty-row"><td colspan="5">Loading candidates...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../JS/jquery-4.0.0.min.js"></script>
+    <script src="../../JS/CONTROLLER(FRONTEND)/candidate.js"></script>
+</body>
+</html>
